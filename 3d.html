@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surxondaryo viloyati — 3D xarita | Termez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="3d.css" />
+</head>
+<body>
+
+  <canvas id="scene"></canvas>
+
+  <!-- ===== YUQORI PANEL ===== -->
+  <header class="hud hud-top">
+    <a class="back-btn" href="index.html"><i class="fas fa-arrow-left"></i> Saytga qaytish</a>
+    <div class="titles">
+      <span class="tag">Interaktiv 3D model</span>
+      <h1>Surxondaryo viloyati <em>(Termez)</em></h1>
+      <p>Sichqoncha bilan aylantiring · g'ildirak bilan kattalashtiring · tumanni bosib tanlang</p>
+    </div>
+  </header>
+
+  <!-- ===== BOSHQARUV PANELI ===== -->
+  <aside class="hud panel">
+    <h2><i class="fas fa-sliders-h"></i> Boshqaruv</h2>
+
+    <button id="btnRotate" class="ctrl active"><i class="fas fa-sync-alt"></i> Avto-aylanish</button>
+    <button id="btnLabels" class="ctrl active"><i class="fas fa-tag"></i> Yorliqlar</button>
+    <button id="btnCities" class="ctrl active"><i class="fas fa-city"></i> Shaharlar</button>
+    <button id="btnOutline" class="ctrl active"><i class="fas fa-draw-polygon"></i> Chegara chizig'i</button>
+    <button id="btnReset" class="ctrl"><i class="fas fa-crosshairs"></i> Kamerani tiklash</button>
+
+    <label class="slider-box">
+      <span>Balandlik: <b id="heightValue">1.0x</b></span>
+      <input type="range" id="heightRange" min="0.2" max="2.5" step="0.1" value="1" />
+    </label>
+
+    <div class="stats-mini">
+      <div><b id="statDistricts">14</b><span>tuman</span></div>
+      <div><b id="statArea">—</b><span>km²</span></div>
+      <div><b id="statPoints">—</b><span>nuqta</span></div>
+    </div>
+  </aside>
+
+  <!-- ===== TUMANLAR RO'YXATI ===== -->
+  <div class="hud legend">
+    <h2><i class="fas fa-list-ul"></i> Tumanlar</h2>
+    <ul id="districtList"></ul>
+  </div>
+
+  <!-- ===== TANLANGAN TUMAN MA'LUMOTI ===== -->
+  <div class="hud info-card" id="infoCard">
+    <h3 id="infoName">Surxondaryo viloyati</h3>
+    <p id="infoText">Viloyat markazi — Termez shahri. Xaritada tumanni tanlang.</p>
+    <div class="info-meta">
+      <span id="infoArea"></span>
+      <span id="infoCenter"></span>
+    </div>
+  </div>
+
+  <div id="labels"></div>
+  <div id="tooltip"></div>
+
+  <div id="loading"><i class="fas fa-circle-notch fa-spin"></i> 3D model yuklanmoqda...</div>
+  <div id="error" hidden></div>
+
+  <!-- Kutubxonalar (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- Ma'lumot: tools/build-geo.js orqali geoBoundaries'dan tayyorlangan -->
+  <script src="data/termiz-geo.js"></script>
+  <!-- 3D sahna kodi -->
+  <script src="termiz3d.js"></script>
+</body>
+</html>
