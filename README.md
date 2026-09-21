@@ -1,1 +1,3 @@
 # Not-fount
+
+Oʻzbekistonning eng janubiy qismida joylashgan, Surxondaryo viloyatining maʼmuriy markazi va Markaziy Osiyodagi eng qadimgi shaharlardan biridir. Tarixi 2500 yildan ziyod davrni oʻz ichiga olgan bu shahar oʻzining boy oʻtmishi, arxeologik yodgorliklari va strategik joylashuvi bilan ajralib turadi.Quyida Termiz shahri haqida batafsil maʼlumotlar keltirilgan:📍 Geografik oʻrni va AholisiJoylashuvi: Amudaryoning oʻng sohilida, Afgʻoniston chegarasiga yaqin joyda, dengiz sathidan oʻrtacha 310 metr balandlikda joylashgan. Toshkentdan 708 km uzoqlikda.Maydoni: 27,8 km².Aholisi: 201,6 ming kishidan ziyod (2024-yil maʼlumotlariga koʻra).Ahamiyati: Xalqaro daryo porti va muhim temir yoʻl stansiyasiga ega, logistika jihatidan strategik nuqta sanaladi.
